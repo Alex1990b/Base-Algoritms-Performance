@@ -8,13 +8,9 @@
 
 import Foundation
 
-
 struct QucikSort: Sortable {
-    var name: String! {
-        return String(describing: QucikSort.self)
-    }
-    
-    func sort<T>(elements: [T], completion: (Double) -> ()) -> [T] where T : Comparable {
+        
+    func sort<T>(elements: [T], completion: SortingResult) -> [T] where T: Comparable {
         
         let timer = Timer()
         
@@ -24,16 +20,19 @@ struct QucikSort: Sortable {
         completion(timer.stop())
         return sotredArray
     }
+}
+
+private extension QucikSort {
     
-   private func quickSort<T: Comparable>(array: inout [T], startIndex: Int, endIndex: Int) {
+    func quickSort<T: Comparable>(array: inout [T], startIndex: Int, endIndex: Int) {
         if startIndex >= endIndex { return }
         let placedItemIndex = partition(array: &array, startIndex: startIndex, endIndex: endIndex)
         quickSort(array: &array, startIndex: startIndex, endIndex: placedItemIndex - 1)
         quickSort(array: &array, startIndex: (placedItemIndex + 1), endIndex: endIndex)
     }
     
-  
-  private func partition<T: Comparable>(array: inout [T], startIndex: Int, endIndex: Int) -> Int {
+    
+    func partition<T: Comparable>(array: inout [T], startIndex: Int, endIndex: Int) -> Int {
         var q = startIndex
         for index in startIndex..<endIndex {
             if array[index] < array[endIndex] {
@@ -42,9 +41,7 @@ struct QucikSort: Sortable {
             }
         }
         array.swapAt(q, endIndex)
-    
+        
         return q
     }
-    
-    
 }

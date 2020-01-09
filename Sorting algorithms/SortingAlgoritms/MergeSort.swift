@@ -9,12 +9,8 @@
 import Foundation
 
 struct MergeSort: Sortable {
-    
-    var name: String! {
-        return String(describing: self)
-    }
-    
-    func sort<T>(elements: [T], completion: (Double) -> ()) -> [T] where T : Comparable {
+        
+    func sort<T>(elements: [T], completion: SortingResult) -> [T] where T: Comparable {
         
         
         let timer = Timer()
@@ -25,8 +21,11 @@ struct MergeSort: Sortable {
         completion(timer.stop())
         return sortedArray
     }
+}
+
+private extension MergeSort {
     
-  private  func mergeSort<T: Comparable>(_ array: [T]) -> [T] {
+    func mergeSort<T: Comparable>(_ array: [T]) -> [T] {
         guard array.count > 1 else { return array }
         
         let middleIndex = array.count / 2
@@ -36,8 +35,8 @@ struct MergeSort: Sortable {
         
         return merge(leftArray, rightArray)
     }
-
-   private func merge<T: Comparable>(_ left: [T], _ right: [T]) -> [T] {
+    
+    func merge<T: Comparable>(_ left: [T], _ right: [T]) -> [T] {
         var leftIndex = 0
         var rightIndex = 0
         
@@ -73,6 +72,4 @@ struct MergeSort: Sortable {
         
         return orderedArray
     }
-    
-    
 }

@@ -9,11 +9,8 @@
 import Foundation
 
 struct InsertionSort: Sortable {
-    var name: String! {
-        return String(describing: self)
-    }
-    
-    func sort<T>(elements: [T], completion: (Double) -> ()) -> [T] where T : Comparable {
+        
+    func sort<T>(elements: [T], completion: SortingResult) -> [T] where T: Comparable {
         
         let timer = Timer()
         var sortedArray = elements
@@ -34,6 +31,4 @@ struct InsertionSort: Sortable {
         completion(timer.stop())
         return sortedArray
     }
-    
-    
 }

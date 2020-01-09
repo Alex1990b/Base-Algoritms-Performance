@@ -9,12 +9,8 @@
 import Foundation
 
 struct BubbleSort: Sortable {
-  
-    var name: String! {
-        return String(describing: self)
-    }
-    
-    func sort<T>(elements: [T], completion: (Double) -> ()) -> [T] where T : Comparable {
+      
+    func sort<T>(elements: [T], completion: SortingResult) -> [T] where T : Comparable {
         
         let timer = Timer()
         

@@ -31,4 +31,3 @@ final class Timer {
         return duration!
     }
 }
-

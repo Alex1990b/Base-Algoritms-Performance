@@ -9,22 +9,22 @@
 import Foundation
 
 struct HeapSort: Sortable {
-    var name: String! {
-        return String(describing: self)
-    }
     
-    func sort<T>(elements: [T], completion: (Double) -> ()) -> [T] where T : Comparable {
+    func sort<T>(elements: [T], completion: SortingResult) -> [T] where T: Comparable {
         
         let timer = Timer()
         var sortedArray = elements
         
         heapsort(list: &sortedArray)
-   
+        
         completion(timer.stop())
         return sortedArray
     }
+}
+
+private extension HeapSort {
     
-   private func heapsort<T:Comparable>( list:inout [T]) {
+    private func heapsort<T: Comparable>(list: inout [T]) {
         var count = list.count
         
         func shiftDown( list:inout [T], start:Int, end:Int) {
@@ -51,7 +51,7 @@ struct HeapSort: Sortable {
             }
         }
         
-        func heapify( list:inout [T], count:Int) {
+        func heapify(list: inout [T], count: Int) {
             var start = (count - 2) / 2
             
             while start >= 0 {
@@ -73,5 +73,4 @@ struct HeapSort: Sortable {
             shiftDown(list: &list, start: 0, end: end)
         }
     }
-    
 }

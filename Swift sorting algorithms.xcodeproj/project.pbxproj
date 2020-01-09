@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0705C3D23C73271003F2144 /* SequentialSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0705C3C23C73271003F2144 /* SequentialSearch.swift */; };
+		B0705C3F23C73287003F2144 /* Searchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0705C3E23C73287003F2144 /* Searchable.swift */; };
+		B0705C4123C7362C003F2144 /* NativeSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0705C4023C7362C003F2144 /* NativeSearch.swift */; };
+		B0705C4323C737EB003F2144 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0705C4223C737EB003F2144 /* BinarySearch.swift */; };
+		B0705C4523C73EA7003F2144 /* HashBasedSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0705C4423C73EA7003F2144 /* HashBasedSearch.swift */; };
 		FA35F9CD212EADBA00FDDB85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35F9CC212EADBA00FDDB85 /* AppDelegate.swift */; };
-		FA35F9CF212EADBA00FDDB85 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35F9CE212EADBA00FDDB85 /* SortViewController.swift */; };
+		FA35F9CF212EADBA00FDDB85 /* AlgorithmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35F9CE212EADBA00FDDB85 /* AlgorithmsViewController.swift */; };
 		FA35F9D2212EADBB00FDDB85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA35F9D0212EADBB00FDDB85 /* Main.storyboard */; };
 		FA35F9D4212EADC200FDDB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA35F9D3212EADC200FDDB85 /* Assets.xcassets */; };
 		FA35F9D7212EADC200FDDB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA35F9D5212EADC200FDDB85 /* LaunchScreen.storyboard */; };
@@ -24,9 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0705C3C23C73271003F2144 /* SequentialSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialSearch.swift; sourceTree = "<group>"; };
+		B0705C3E23C73287003F2144 /* Searchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searchable.swift; sourceTree = "<group>"; };
+		B0705C4023C7362C003F2144 /* NativeSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeSearch.swift; sourceTree = "<group>"; };
+		B0705C4223C737EB003F2144 /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
+		B0705C4423C73EA7003F2144 /* HashBasedSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashBasedSearch.swift; sourceTree = "<group>"; };
 		FA35F9C9212EADBA00FDDB85 /* Swift sorting algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift sorting algorithms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA35F9CC212EADBA00FDDB85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA35F9CE212EADBA00FDDB85 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
+		FA35F9CE212EADBA00FDDB85 /* AlgorithmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsViewController.swift; sourceTree = "<group>"; };
 		FA35F9D1212EADBB00FDDB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA35F9D3212EADC200FDDB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA35F9D6212EADC200FDDB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +63,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0705C3B23C72FE2003F2144 /* SearchingAlgoritms */ = {
+			isa = PBXGroup;
+			children = (
+				B0705C3C23C73271003F2144 /* SequentialSearch.swift */,
+				B0705C4023C7362C003F2144 /* NativeSearch.swift */,
+				B0705C4223C737EB003F2144 /* BinarySearch.swift */,
+				B0705C4423C73EA7003F2144 /* HashBasedSearch.swift */,
+			);
+			path = SearchingAlgoritms;
+			sourceTree = "<group>";
+		};
 		FA35F9C0212EADBA00FDDB85 = {
 			isa = PBXGroup;
 			children = (
@@ -72,9 +93,11 @@
 		FA35F9CB212EADBA00FDDB85 /* Sorting algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				FA35FA0B21340E4700FDDB85 /* Protocols */,
+				B0705C3B23C72FE2003F2144 /* SearchingAlgoritms */,
 				FA35FA0821340B9500FDDB85 /* SortingAlgoritms */,
 				FA35FA0621340B8000FDDB85 /* Helpers */,
-				FA35F9CE212EADBA00FDDB85 /* SortViewController.swift */,
+				FA35F9CE212EADBA00FDDB85 /* AlgorithmsViewController.swift */,
 				FA35F9CC212EADBA00FDDB85 /* AppDelegate.swift */,
 				FA35F9D0212EADBB00FDDB85 /* Main.storyboard */,
 				FA35F9D3212EADC200FDDB85 /* Assets.xcassets */,
@@ -95,7 +118,6 @@
 		FA35FA0821340B9500FDDB85 /* SortingAlgoritms */ = {
 			isa = PBXGroup;
 			children = (
-				FA35FA0B21340E4700FDDB85 /* Protocols */,
 				FA35F9DE212EADE100FDDB85 /* BubbleSort.swift */,
 				FA35FA022134070300FDDB85 /* SelectionSort.swift */,
 				FA35FA0921340BE800FDDB85 /* NativeSwiftSort.swift */,
@@ -111,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				FA35FA0C21340E5B00FDDB85 /* Sortable.swift */,
+				B0705C3E23C73287003F2144 /* Searchable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -188,15 +211,20 @@
 			files = (
 				FA35FA032134070300FDDB85 /* SelectionSort.swift in Sources */,
 				FA35FA0F2134145B00FDDB85 /* InsertionSort.swift in Sources */,
-				FA35F9CF212EADBA00FDDB85 /* SortViewController.swift in Sources */,
+				FA35F9CF212EADBA00FDDB85 /* AlgorithmsViewController.swift in Sources */,
 				FA35FA0A21340BE800FDDB85 /* NativeSwiftSort.swift in Sources */,
 				FA35FA0D21340E5B00FDDB85 /* Sortable.swift in Sources */,
 				FA35F9CD212EADBA00FDDB85 /* AppDelegate.swift in Sources */,
 				FA35FA1121341DE200FDDB85 /* MergeSort.swift in Sources */,
+				B0705C4523C73EA7003F2144 /* HashBasedSearch.swift in Sources */,
 				FA35FA152134281F00FDDB85 /* HeapSort.swift in Sources */,
 				FA35FA132134238200FDDB85 /* QucikSort.swift in Sources */,
 				FA35FA05213409ED00FDDB85 /* Timer.swift in Sources */,
+				B0705C4123C7362C003F2144 /* NativeSearch.swift in Sources */,
+				B0705C3F23C73287003F2144 /* Searchable.swift in Sources */,
+				B0705C3D23C73271003F2144 /* SequentialSearch.swift in Sources */,
 				FA35F9DF212EADE100FDDB85 /* BubbleSort.swift in Sources */,
+				B0705C4323C737EB003F2144 /* BinarySearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
